@@ -993,7 +993,7 @@ abstract class CI_DB_driver {
 		{
 			return ($str === FALSE) ? 0 : 1;
 		}
-		elseif ($str === NULL)
+		elseif (is_null($str))
 		{
 			return 'NULL';
 		}

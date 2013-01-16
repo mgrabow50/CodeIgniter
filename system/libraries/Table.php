@@ -291,7 +291,7 @@ class CI_Table {
 	{
 		// The table data can optionally be passed to this function
 		// either as a database result object or an array
-		if ($table_data !== NULL)
+		if ( ! is_null($table_data))
 		{
 			if (is_object($table_data))
 			{

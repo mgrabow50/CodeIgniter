@@ -356,12 +356,12 @@ class CI_Unit_test {
 	 */
 	protected function _parse_template()
 	{
-		if ($this->_template_rows !== NULL)
+		if ( ! is_null($this->_template_rows))
 		{
 			return;
 		}
 
-		if ($this->_template === NULL OR ! preg_match('/\{rows\}(.*?)\{\/rows\}/si', $this->_template, $match))
+		if (is_null($this->_template) OR ! preg_match('/\{rows\}(.*?)\{\/rows\}/si', $this->_template, $match))
 		{
 			$this->_default_template();
 			return;

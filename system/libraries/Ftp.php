@@ -266,7 +266,7 @@ class CI_FTP {
 		}
 
 		// Set file permissions if needed
-		if ($permissions !== NULL)
+		if ( ! is_null($permissions))
 		{
 			$this->chmod($path, (int) $permissions);
 		}
@@ -320,7 +320,7 @@ class CI_FTP {
 		}
 
 		// Set file permissions if needed
-		if ($permissions !== NULL)
+		if ( ! is_null($permissions))
 		{
 			$this->chmod($rempath, (int) $permissions);
 		}

@@ -354,7 +354,7 @@ class CI_DB_result {
 			return;
 		}
 
-		if ($key !== '' && $value !== NULL)
+		if ($key !== '' && ! is_null($value))
 		{
 			$this->row_data[$key] = $value;
 		}

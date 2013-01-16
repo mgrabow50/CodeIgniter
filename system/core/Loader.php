@@ -205,7 +205,7 @@ class CI_Loader {
 			return;
 		}
 
-		if ($params !== NULL && ! is_array($params))
+		if ( ! is_null($params) && ! is_array($params))
 		{
 			$params = NULL;
 		}
@@ -975,7 +975,7 @@ class CI_Loader {
 					// Before we deem this to be a duplicate request, let's see
 					// if a custom object name is being supplied. If so, we'll
 					// return a new instance of the object
-					if ($object_name !== NULL)
+					if ( ! is_null($object_name))
 					{
 						$CI =& get_instance();
 						if ( ! isset($CI->$object_name))
@@ -1014,7 +1014,7 @@ class CI_Loader {
 					// Before we deem this to be a duplicate request, let's see
 					// if a custom object name is being supplied. If so, we'll
 					// return a new instance of the object
-					if ($object_name !== NULL)
+					if ( ! is_null($object_name))
 					{
 						$CI =& get_instance();
 						if ( ! isset($CI->$object_name))
@@ -1144,7 +1144,7 @@ class CI_Loader {
 		// Was a custom class name supplied? If so we'll use it
 		$class = strtolower($class);
 
-		if ($object_name === NULL)
+		if (is_null($object_name))
 		{
 			$classvar = isset($this->_ci_varmap[$class]) ? $this->_ci_varmap[$class] : $class;
 		}
